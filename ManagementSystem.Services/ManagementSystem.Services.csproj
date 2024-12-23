@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath>..\ManagementSystem.Web\bin</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Server.IIS" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ManagementSystem.Common\ManagementSystem.Common.csproj" />
+    <ProjectReference Include="..\ManagementSystem.Extensions\ManagementSystem.Extensions.csproj" />
+    <ProjectReference Include="..\ManagementSystem.IServices\ManagementSystem.IServices.csproj" />
+    <ProjectReference Include="..\ManagementSystem.Model\ManagementSystem.Model.csproj" />
+    <ProjectReference Include="..\ManagementSystem.Repository\ManagementSystem.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath>..\ManagementSystem.Web\bin</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" />
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IIS" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" />
+    <PackageReference Include="Microsoft.OpenApi" />
+    <PackageReference Include="NetDevPack.Security.JwtExtensions" />
+    <PackageReference Include="StackExchange.Redis" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ManagementSystem.Common\ManagementSystem.Common.csproj" />
+    <ProjectReference Include="..\ManagementSystem.IServices\ManagementSystem.IServices.csproj" />
+    <ProjectReference Include="..\ManagementSystem.Model\ManagementSystem.Model.csproj" />
+    <ProjectReference Include="..\ManagementSystem.Repository\ManagementSystem.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

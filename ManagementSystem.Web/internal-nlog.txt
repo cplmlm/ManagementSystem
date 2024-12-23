@@ -1,0 +1,44 @@
+2024-12-13 09:37:14.6561 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2024-12-13 09:37:14.6660 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2024-12-13 09:37:14.6660 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Unrecognized element 'internalLogging' from section 'NLog'
+2024-12-13 09:37:14.6762 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-13 09:37:14.6922 Info Validating config: TargetNames=mysql, ConfigItems=38, FilePath=E:\Code\ManagementSystem\APIGitee\ManagementSystem.Web\bin\Debug\net8.0\NLog.config
+2024-12-13 09:37:14.6922 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: internalLog
+2024-12-13 09:37:14.7086 Info Configuration initialized.
+2024-12-13 09:37:15.2637 Error DatabaseTarget(Name=mysql): Error when writing to database. Exception: Npgsql.PostgresException (0x80004005): 42804: 字段 "logged" 的类型为 timestamp without time zone, 但表达式的类型为 text
+
+POSITION: 131
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at NLog.Targets.DatabaseTarget.ExecuteDbCommandWithParameters(LogEventInfo logEvent, IDbConnection dbConnection, IDbTransaction dbTransaction)
+   at NLog.Targets.DatabaseTarget.WriteLogEventSuppressTransactionScope(LogEventInfo logEvent, String connectionString)
+  Exception data:
+    Severity: 错误
+    SqlState: 42804
+    MessageText: 字段 "logged" 的类型为 timestamp without time zone, 但表达式的类型为 text
+    Hint: 你需要重写或转换表达式
+    Position: 131
+    File: parse_target.c
+    Line: 591
+    Routine: transformAssignedExpr
+2024-12-13 09:45:11.0904 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2024-12-13 09:45:11.1005 Info Registered target NLog.Targets.FileTarget(Name=internalLog)
+2024-12-13 09:45:11.1005 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Unrecognized element 'internalLogging' from section 'NLog'
+2024-12-13 09:45:11.1005 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-13 09:45:11.1290 Info Validating config: TargetNames=mysql, internalLog, ConfigItems=39, FilePath=E:\Code\ManagementSystem\APIGitee\ManagementSystem.Web\bin\Debug\net8.0\NLog.config
+2024-12-13 09:45:11.1469 Info Configuration initialized.
+2024-12-13 09:47:31.9476 Info Registered target NLog.Targets.DatabaseTarget(Name=mysql)
+2024-12-13 09:47:31.9614 Info Registered target NLog.Targets.FileTarget(Name=log_file)
+2024-12-13 09:47:31.9614 Info Registered target NLog.Targets.Wrappers.AsyncTargetWrapper(Name=asyncFile)
+2024-12-13 09:47:31.9614 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Unrecognized element 'internalLogging' from section 'NLog'
+2024-12-13 09:47:31.9730 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'colorConsole' not found for logging rule: *.
+2024-12-13 09:47:31.9730 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.4.2778. Product version: 5.3.4+73d83d3161d31288ca5c554cc50d27b6bed5f28b. GlobalAssemblyCache: False
+2024-12-13 09:47:31.9730 Info Validating config: TargetNames=mysql, asyncFile, ConfigItems=63, FilePath=E:\Code\ManagementSystem\APIGitee\ManagementSystem.Web\bin\Debug\net8.0\NLog.config
+2024-12-13 09:47:32.0071 Info Configuration initialized.
